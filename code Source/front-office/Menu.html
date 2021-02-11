@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="./assets/css/Menu.css">
+  <title>Menu</title>
+</head>
+
+<body>
+
+  <header id="header" class="alt">
+    <a href="index.html" class="logo"><strong>McDonald</strong></a>
+  </header><br /><br /><br /><br />
+
+
+  <div class="container bootstrap snippets bootdey">
+    <div class="row">
+      <div class="col br-a br-light bg-light pv20 ph30">
+        <h4 class="micro-header" id="menuTrans">Our Menu</h4>
+        <div class="row text-center d-flex justify-content-center" id="content-menu">
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sousmenu" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <input type="hidden" name="" id="idMenu" value="">
+        <form>
+          <div class="modal-header">
+            <h4 class="modal-title" id="submenuTrans"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+
+          <div class="modal-body" id="appendSousMenu">
+
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-primary" href="#supp" id="goSupp" data-toggle="modal" role="button"></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="product" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content modal-content-product">
+        <input type="hidden" name="" id="idSousMenu" value="">
+        <form>
+          <div class="modal-header">
+            <h4 class="modal-title" id="productTrans"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+
+          <div class="modal-body" >
+            <div class="container-fluid" id="appendProduct">
+
+
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-primary" href="#supp" id="goSupp1" data-toggle="modal" role="button"></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Supp-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="supp" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="suppTitleTrans"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-body">
+          <div class="container-fluid" id="supAppend">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-primary" href="#payment" id="goPayment" data-toggle="modal" role="button"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <a href="#Cash" class="btn btn-success" data-toggle="modal" ><span id="cashButtonTrans"></span></a><br/><br/>
+            <a href="#Card" class="btn btn-success" data-toggle="modal" ><span id="ccButtonTrans"></span></a>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Cash  -->
+
+  <div id="Cash" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h4 class="modal-title" id="cashTrans"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label id="askCouponTrans"></label>
+              <input name="codeP" id="coupon" type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label id="askNumberTableTrans"></label>
+
+              <select name="tableS" id="tableDispo" class="form-control">
+               
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input type="button" class="btn btn-default" id="hideModelCash" data-dismiss="modal" value="">
+            <input type="button" id="cashPurchase" class="btn btn-success" value="">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Card  -->
+
+  <div id="Card" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="payment-form"  onsubmit="event.preventDefault(); payment(); document.getElementById('ccpurchase').disabled = true"">
+          <div class="modal-header">
+            <h4 class="modal-title" id="cardTrans"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label id="nameTrans"></label>
+              <input name="name" type="text" id="nom" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label id="emailTrans"></label>
+              <input name="Email" type="text" id="email" class="form-control" required>
+            </div>
+           
+            <div class="form-group">
+              <label id="askCouponCCTrans"></label>
+              <input name="codeP" id="couponStripe" type="text" class="form-control" >
+            </div>
+            <div id="card-element" class="form-control"></div>
+
+          </div>
+          <div class="modal-footer">
+            <input type="button" class="btn btn-default" id="hideModelCc" data-dismiss="modal" value="">
+            <input type="submit" id="ccpurchase" class="btn btn-success" value="">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/translatorMenu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="assets/js/Menu.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="assets/js/axios.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

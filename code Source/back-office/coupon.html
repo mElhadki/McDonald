@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="./assets/css/main.css">
+<link rel="stylesheet" href="./assets/css/dataTables.bootstrap4.min.css">
+<title>Dashboard</title>
+</head>
+<body>
+
+    <nav class="menu" tabindex="0">
+        <div class="smartphone-menu-trigger"></div>
+      <header class="avatar">
+            <img src="images/Admin-pana.svg"/>
+        <h2 id="username"></h2>
+      </header>
+        <ul>
+          <li tabindex="0" class="icon-customers"><a href="Dashboard.html"><span>Dashboard</span></a></li>
+            <li tabindex="0" class="icon-customers"><a href="menu.html"><span>Menu</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="sousmenu.html"><span>Sous-Menu</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="product.html"><span>Produits</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="coupon.html"><span>Coupon</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="table.html"><span>Tables</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="supplement.html"><span>Supplement</span></a></li>
+
+      </ul>
+    </nav>
+    
+    <main>
+
+      <div class="container">
+        <div class="table-wrapper">
+          <div class="table-title">
+            <div class="row">
+              <div class="col-sm-6">
+                <h2>Manage <b>Coupon</b></h2>
+              </div>
+              <div class="col-sm-6">
+                <a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i
+                    class="material-icons">&#xE147;</i> <span>Ajouter ub menu</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Code coupon</th>
+                        <th>Pourcentage</th>
+                        <th>Validité</th>
+                        <th>Action </th>
+
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Code coupon</th>
+                        <th>Pourcentage</th>
+                        <th>Validité</th>
+                        <th>Action </th>
+                    </tr>
+                </tfoot>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+        </div>
+      </div>
+      <!-- Add Modal HTML -->
+      <div id="addProductModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+         
+            
+              <div class="modal-header">
+                <h4 class="modal-title">Ajouter un Menu</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label>Code coupon</label>
+                  <input id="code" type="text" class="form-control" required>
+                </div>
+             
+                <div class="form-group">
+                  <label>Pourcentage</label>
+                  <input id="percent"  type="number" class="form-control"  required>
+                </div>
+
+               
+
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-default" id="hideModel" data-dismiss="modal" value="Cancel">
+                <input type="button" id="pushdata" class="btn btn-success" value="Add">
+              </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Edit Modal HTML -->
+      <div id="editProductModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            
+              <div class="modal-header">
+                <h4 class="modal-title">Edit Product</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                <input type="hidden" id="idCouponUpdate" value=""> 
+                <div class="form-group">
+                  <label>Code coupon</label>
+                  <input id="codeUpdate" type="text" class="form-control" required>
+                </div>
+             
+                <div class="form-group">
+                  <label>Pourcentage</label>
+                  <input id="percentUpdate"  type="number" class="form-control"  required>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-default" id="hideModelEdit" data-dismiss="modal" value="Cancel">
+                <input type="button" class="btn btn-info" id="updateIt" value="Save">
+              </div>
+            
+          </div>
+        </div>
+      </div>
+      <!-- Delete Modal HTML -->
+      <div id="deleteProductModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form>
+              <input type="hidden" name="idDeleted" id="idDeletehidden">
+              <div class="modal-header">
+                <h4 class="modal-title">Delete Product</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body modal-body-delete">
+                <input type="hidden" name="" id="idCouponDelete" value="">
+                <p>Are you sure you want to delete these Records?</p>
+                <p class="text-warning"><small>This action cannot be undone.</small></p>
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-default" id="hideDelete" data-dismiss="modal" value="Cancel">
+                <input type="button" class="btn btn-danger" id="deleteId" value="Delete">
+              </div>
+            
+          </div>
+        </div>
+      </div> 
+    </main>
+
+    <script>
+      if (localStorage.getItem("username") === null) {
+
+      window.location.href = "login.html";
+
+     }
+     else{
+        //console.log(localStorage.getItem("username"))
+        document.getElementById("username").innerHTML = localStorage.getItem("username");
+     }
+  
+  </script>
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.dataTables.js"></script>
+<script src="assets/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="assets/js/axiosScriptCoupon.js"></script>
+<script>
+$(document).on("click", ".editMenu", function () {
+     var menuId = $(this).data('id');
+     $(".modal-body #idCouponUpdate").val( menuId );
+});
+
+$(document).on("click", ".deleteMenu", function () {
+     var menuIdDelete = $(this).data('iddelete');
+     $(".modal-body-delete #idCouponDelete").val( menuIdDelete );
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="./assets/css/main.css">
+<title>Dashboard</title>
+</head>
+<body>
+
+    <nav class="menu" tabindex="0">
+        <div class="smartphone-menu-trigger"></div>
+      <header class="avatar">
+            <img src="images/Admin-pana.svg"/>
+        <h2 id="username"></h2>
+      </header>
+        <ul>
+            <li tabindex="0" class="icon-customers"><a href="Dashboard.html"><span>Dashboard</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="menu.html"><span>Menu</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="sousmenu.html"><span>Sous-Menu</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="product.html"><span>Produits</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="coupon.html"><span>Coupon</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="table.html"><span>Tables</span></a></li>
+            <li tabindex="0" class="icon-users"><a href="supplement.html"><span>Supplement</span></a></li>
+
+      </ul>
+    </nav>
+    
+    <main>
+
+        <div id="page-wrapper" class="container">
+        
+            <img src="./images/Dashboard-cuate.svg">
+          <div class="row">
+              <div class="col-lg-3">
+                  <div class="panel panel-info">
+                      <div class="panel-heading">
+                          <div class="row">
+                              <div class="col-xs-6">
+                                  <i class="fa fas fa-bars fa-5x"></i>
+                              </div>
+                              <div class="col-xs-6 text-right">
+                                  
+                                  <p class="announcement-text">Menu</p>
+                              </div>
+                          </div>
+                      </div>
+                      <a href="#">
+                          <div class="panel-footer announcement-bottom">
+                              <div class="row">
+                                  <div class="col-xs-6">
+                                      View
+                                  </div>
+                                  <div class="col-xs-6 text-right">
+                                      <i class="fa fa-arrow-circle-right"></i>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+              <div class="col-lg-3">
+                  <div class="panel panel-warning">
+                      <div class="panel-heading">
+                          <div class="row">
+                              <div class="col-xs-6">
+                                  <i class="fa fa-check fa-5x"></i>
+                              </div>
+                              <div class="col-xs-6 text-right">
+                                 
+                                  <p class="announcement-text">Sous Menu</p>
+                              </div>
+                          </div>
+                      </div>
+                      <a href="#">
+                          <div class="panel-footer announcement-bottom">
+                              <div class="row">
+                                  <div class="col-xs-6">
+                                      View
+                                  </div>
+                                  <div class="col-xs-6 text-right">
+                                      <i class="fa fa-arrow-circle-right"></i>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+              <div class="col-lg-3">
+                  <div class="panel panel-danger">
+                      <div class="panel-heading">
+                          <div class="row">
+                              <div class="col-xs-6">
+                                  <i class="fa fa-tasks fa-5x"></i>
+                              </div>
+                              <div class="col-xs-6 text-right">
+                                 
+                                  <p class="announcement-text">Products</p>
+                              </div>
+                          </div>
+                      </div>
+                      <a href="#">
+                          <div class="panel-footer announcement-bottom">
+                              <div class="row">
+                                  <div class="col-xs-6">
+                                      View
+                                  </div>
+                                  <div class="col-xs-6 text-right">
+                                      <i class="fa fa-arrow-circle-right"></i>
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          </div><!-- /.row -->
+              </div>
+     
+    </main>
+
+    <script>
+         if (localStorage.getItem("username") === null) {
+
+         window.location.href = "index.html";
+
+        }
+        else{
+           //console.log(localStorage.getItem("username"))
+           document.getElementById("username").innerHTML = localStorage.getItem("username");
+        }
+     
+     </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
