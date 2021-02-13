@@ -16,9 +16,10 @@ router.route("/add").post(async (req, res) => {
 
   let storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      // @ts-ignore
+      // @ts-ignore callback
       cb(null, __basedir + "/app/upload");
     },
+    //define the filename in req.file.originalname
     filename: (req, file, cb) => {
       console.log(file.originalname);
       cb(null, file.originalname);
@@ -32,8 +33,9 @@ router.route("/add").post(async (req, res) => {
     limits: {
       fileSize: maxSize
     },
-  }).single("file");
+  }).single("file"); //middleware to take just file 
 
+  //define uploadFile as promise
   let uploadFileMiddleware = util.promisify(uploadFile);
 
   try {
@@ -59,7 +61,7 @@ router.route("/add").post(async (req, res) => {
 
 
   } catch (err) {
-    console.log(err);
+    
 
     if (err.code == "LIMIT_FILE_SIZE") {
       return res.status(500).send({
@@ -106,6 +108,7 @@ router.route("/update/:id").put(async (req, res) => {
     const imagePath = req.file.originalname;
     Menu.updateOne({ _id: req.params.id }, { nomMenu: nomMenu, imagePath: imagePath}).then(() => res.status(201).json("Sous menu successfully update"))
       .catch((err) => res.status(400).json("Error :" + err));
+    
 
   } catch (err) {
     console.log(err);

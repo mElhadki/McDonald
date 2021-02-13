@@ -134,6 +134,8 @@ router.route("/:id").get((req, res) => {
     .catch((err) => res.status(400).json("Error :" + err));
 });
 
+
+//I use it for <select> backoffice 
 router.route("/select/:id").get((req, res) => {
   SousMenu.find({idMenu : req.params.id})
     .then((sousmenu) => res.json(sousmenu))

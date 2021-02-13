@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bodyParser = require('body-parser');
-
+const logger = require('./app/configs/logger');
 // @ts-ignore
 global.__basedir = __dirname;
 app.use(express.urlencoded({ extended: true }));
@@ -34,9 +34,9 @@ mongoose.connect(dbConfig.url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
-  console.log("info","Successfully connected to the database");
+  logger.log("info","Successfully connected to the database");
 }).catch(err => {
-  console.log('Could not connect to the database. Exiting now...', err);
+  logger.log("info",'Could not connect to the database. Exiting now...', err);
   process.exit();
 });
 const menuRouter = require("./app/routes/routes.menu");
@@ -62,8 +62,9 @@ app.use('/image', imageRouter);
 
 const tableRouter = require('./app/routes/routes.table');
 
+
 app.use('/table', tableRouter);
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  logger.log("info",`Example app listening at http://localhost:${port}`)
 })

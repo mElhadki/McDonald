@@ -12,11 +12,13 @@ let Coupon = require('../models/model.coupon');
 let TableModel = require('../models/model.table');
 const stripe = require('stripe')('sk_test_51HOViXL0RN1zXroUxig08g4BkMAmfo401W82WKPGjQ7rEke3Im3UH3uqmGFafS0ZYOUhulr3eX4AXuOdjGgv67mF00lud9Xx5Z')
 
+//route checkout for credit card
 router.route("/cc").post(async (req, res) => {
   try {
     var totalAll
     var objData = []
 
+//req.body.id["62387328323", "", ""]
   for (var i = 0; i < req.body.id.length; i++) {
 
     if (req.body.id[i] !== "") {
@@ -47,10 +49,11 @@ console.log(objDataSupp);
   await TableModel.updateOne({numeroTable : req.body.table}, {$set: { reserve : "1"}})
 
   var pointTotal = 0;
+  // loop for quantite of product pointtotal = quantiteProduct * pointProduct 
   for (var i = 0; i < req.body.quantite.length; i++) {
     pointTotal += parseInt(req.body.quantite[i]) * parseInt(req.body.point[i]);
   }
-
+  // loop for quantite of supplement 
   for(var i = 0; i < req.body.quantiteSupp.length; i++){
     pointTotal += parseInt(req.body.quantiteSupp[i]) * parseInt(req.body.pointSupp[i])
   }

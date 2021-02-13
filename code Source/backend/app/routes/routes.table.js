@@ -8,6 +8,7 @@ router.route("/").get((req, res) => {
     .catch((err) => res.status(400).json("Error :" + err));
 });
 
+//find no reserved table 
 router.route("/frontend").get((req, res) => {
   Table.find({reserve:"0"}).then((table) => res.json(table))
   .catch((err) => res.status(400).json("Error :" + err));
