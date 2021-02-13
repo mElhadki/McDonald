@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6024657b3af9b17fd69654aa"
+  },
+  "nomSupp": "coca",
+  "imagePath": "200043_web_ch_md_hero_cocacola_50.2e16d0ba.fill-1200x630.jpg",
+  "prix": "20",
+  "pointFid": "105"
+},{
+  "_id": {
+    "$oid": "602465fc3af9b17fd69654ab"
+  },
+  "nomSupp": "Fanta",
+  "imagePath": "mcdonalds-Fanta-Orange-Medium.jpg",
+  "prix": "20",
+  "pointFid": "105"
+},{
+  "_id": {
+    "$oid": "6024689b3af9b17fd69654ac"
+  },
+  "nomSupp": "sprite",
+  "imagePath": "be_cso_pop_LargeSprite.png",
+  "prix": "20",
+  "pointFid": "105"
+}]

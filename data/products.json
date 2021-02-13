@@ -1,0 +1,155 @@
+[{
+  "_id": {
+    "$oid": "6022222a0bbce323fe88fdd3"
+  },
+  "nomProduct": "Happy Meal (Humberger)",
+  "imagePath": "tpo-1700.png",
+  "idMenu": "60221fdc0bbce323fe88fdce",
+  "idSousMenu": "602220010bbce323fe88fdcf",
+  "prix": "50",
+  "pointFid": "270",
+  "ingredient": "test"
+},{
+  "_id": {
+    "$oid": "60244b503af9b17fd6965492"
+  },
+  "nomProduct": "Happy Meal (cheeseburger)",
+  "imagePath": "650x350_mcdonalds_cheeseburger_community.jpg",
+  "idMenu": "60221fdc0bbce323fe88fdce",
+  "idSousMenu": "602220010bbce323fe88fdcf",
+  "prix": "30",
+  "pointFid": "162",
+  "ingredient": "Sandwich a choisi \nMini Salade\ndessert \nFrite\nBoisson Soda"
+},{
+  "_id": {
+    "$oid": "60244bce3af9b17fd6965493"
+  },
+  "nomProduct": "Happy Meal (ChikenBurger)",
+  "imagePath": "591de2e9acc951b43343b7bde7dee7e6.jpg",
+  "idMenu": "60221fdc0bbce323fe88fdce",
+  "idSousMenu": "602220010bbce323fe88fdcf",
+  "prix": "40",
+  "pointFid": "212",
+  "ingredient": "sandwich choisi \nmini salade\ndesert\nfrite \nBoisson Soda"
+},{
+  "_id": {
+    "$oid": "602456983af9b17fd696549d"
+  },
+  "nomProduct": "Boite a partager",
+  "imagePath": "front_fr.20.full.jpg",
+  "idMenu": "60221fdc0bbce323fe88fdce",
+  "idSousMenu": "sanssousmenu",
+  "prix": "20",
+  "pointFid": "105",
+  "ingredient": "12 chicken Mc Nuggets\n3 Chicken Sticks\n6 Croquette Fromage poivron\n3 sauce au choix"
+},{
+  "_id": {
+    "$oid": "60245ebe3af9b17fd696549f"
+  },
+  "nomProduct": "WrapMiel",
+  "imagePath": "téléchargement (3).jfif",
+  "idMenu": "60244e683af9b17fd6965495",
+  "idSousMenu": "sanssousmenu",
+  "prix": "20",
+  "pointFid": "105",
+  "ingredient": "Wrap\nFrite\nBoisson Soda"
+},{
+  "_id": {
+    "$oid": "60245fc33af9b17fd69654a0"
+  },
+  "nomProduct": "CheeseBurger",
+  "imagePath": "-452257.jpg",
+  "idMenu": "60244e683af9b17fd6965495",
+  "idSousMenu": "60245ded3af9b17fd696549e",
+  "prix": "40",
+  "pointFid": "212",
+  "ingredient": "sandwich choisi \nfrite \nBoisson Soda"
+},{
+  "_id": {
+    "$oid": "602460f33af9b17fd69654a2"
+  },
+  "nomProduct": "Humberger",
+  "imagePath": "images.jfif",
+  "idMenu": "60244e683af9b17fd6965495",
+  "idSousMenu": "602460c53af9b17fd69654a1",
+  "prix": "20",
+  "pointFid": "105",
+  "ingredient": "sandwich choisi \nfrite \nboisson soda"
+},{
+  "_id": {
+    "$oid": "602461393af9b17fd69654a3"
+  },
+  "nomProduct": "chickenBurger",
+  "imagePath": "b4496acb-32b7-4b27-8d91-b6e7a3c21218.jpg",
+  "idMenu": "60244e683af9b17fd6965495",
+  "idSousMenu": "602460c53af9b17fd69654a1",
+  "prix": "50",
+  "pointFid": "270",
+  "ingredient": "sandwich choisi \nfrite \nBoisson soda"
+},{
+  "_id": {
+    "$oid": "6024626b3af9b17fd69654a4"
+  },
+  "nomProduct": "Grand Mc Wrap",
+  "imagePath": "sandwichs-2-algerienne_0_0.png",
+  "idMenu": "602450e43af9b17fd6965496",
+  "idSousMenu": "sanssousmenu",
+  "prix": "30",
+  "pointFid": "162",
+  "ingredient": "Sandwich choisi"
+},{
+  "_id": {
+    "$oid": "602463413af9b17fd69654a5"
+  },
+  "nomProduct": "Double bigMac",
+  "imagePath": "téléchargement (4).jfif",
+  "idMenu": "602450e43af9b17fd6965496",
+  "idSousMenu": "sanssousmenu",
+  "prix": "30",
+  "pointFid": "162",
+  "ingredient": "Sandwich choisi"
+},{
+  "_id": {
+    "$oid": "602463a03af9b17fd69654a6"
+  },
+  "nomProduct": "recette fromage Fondu",
+  "imagePath": "téléchargement (5).jfif",
+  "idMenu": "602450e43af9b17fd6965496",
+  "idSousMenu": "sanssousmenu",
+  "prix": "30",
+  "pointFid": "162",
+  "ingredient": "sandwich choisi"
+},{
+  "_id": {
+    "$oid": "602464203af9b17fd69654a7"
+  },
+  "nomProduct": "Salade Italienne",
+  "imagePath": "téléchargement (7).jfif",
+  "idMenu": "602451413af9b17fd6965497",
+  "idSousMenu": "sanssousmenu",
+  "prix": "30",
+  "pointFid": "162",
+  "ingredient": "Salad choisi"
+},{
+  "_id": {
+    "$oid": "6024643c3af9b17fd69654a8"
+  },
+  "nomProduct": "Salade César",
+  "imagePath": "téléchargement (6).jfif",
+  "idMenu": "602451413af9b17fd6965497",
+  "idSousMenu": "sanssousmenu",
+  "prix": "30",
+  "pointFid": "162",
+  "ingredient": "salade choisi"
+},{
+  "_id": {
+    "$oid": "602464583af9b17fd69654a9"
+  },
+  "nomProduct": "Salade Pécheur",
+  "imagePath": "salade_pecheur_mcdonalds.png",
+  "idMenu": "602451413af9b17fd6965497",
+  "idSousMenu": "sanssousmenu",
+  "prix": "30",
+  "pointFid": "162",
+  "ingredient": "Salad choisi"
+}]

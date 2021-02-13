@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "60221fdc0bbce323fe88fdce"
+  },
+  "nomMenu": "Menu",
+  "imagePath": "-452257.jpg"
+},{
+  "_id": {
+    "$oid": "60244e683af9b17fd6965495"
+  },
+  "nomMenu": "petit Faim",
+  "imagePath": "AUTOPROMO_MCMUFFIN_854x374.jpg"
+},{
+  "_id": {
+    "$oid": "602450e43af9b17fd6965496"
+  },
+  "nomMenu": "sandwich",
+  "imagePath": "000029153_600x400_c.png"
+},{
+  "_id": {
+    "$oid": "602451413af9b17fd6965497"
+  },
+  "nomMenu": "Salade",
+  "imagePath": "5c93a6bf1f000050007ec20e.jpeg"
+}]

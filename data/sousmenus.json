@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "602220010bbce323fe88fdcf"
+  },
+  "nomSousMenu": "happy Meal",
+  "imagePath": "91fc4873caaacb605d36e7397254e386.jpg",
+  "idMenu": "60221fdc0bbce323fe88fdce"
+},{
+  "_id": {
+    "$oid": "60245ded3af9b17fd696549e"
+  },
+  "nomSousMenu": "Menu Chesse",
+  "imagePath": "-452257.jpg",
+  "idMenu": "60244e683af9b17fd6965495"
+},{
+  "_id": {
+    "$oid": "602460c53af9b17fd69654a1"
+  },
+  "nomSousMenu": "Menu Burger",
+  "imagePath": "images (1).jfif",
+  "idMenu": "60244e683af9b17fd6965495"
+}]
